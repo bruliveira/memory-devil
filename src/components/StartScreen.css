@@ -1,7 +1,9 @@
 .start-screen {
   width: 100vw;
   min-height: 100vh;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(
     180deg,
     #8b0000 0%,
@@ -92,13 +94,12 @@
   backdrop-filter: blur(15px);
   max-width: 500px;
   width: 90%;
-  margin: 20px auto;
   position: relative;
   border: 3px solid rgba(255, 192, 203, 0.2);
 }
 
 .start-content::before {
-  content: "🔥😈👹💀";
+  content: "👿😈💀👺";
   position: absolute;
   top: -15px;
   left: 50%;

@@ -9,33 +9,27 @@ const Game = ({ onGameOver }) => {
   const [gameCompleted, setGameCompleted] = useState(false);
   const [difficulty, setDifficulty] = useState(4); // Quantidades de pares
 
-  const kdramaEmojis = [
-    "💗",
-    "🌸",
-    "🌺",
-    "🎎",
-    "🍡",
-    "🧸",
-    "📱",
-    "💌",
-    "🌙",
-    "⭐",
-    "🎭",
-    "🎪",
-    "🍓",
-    "🎀",
-    "💝",
-    "🌷",
+  const capetinhaPhotos = [
+    "/1.jpeg",
+    "/2.jpeg",
+    "/3.jpeg",
+    "/4.jpeg",
+    "/5.jpeg",
+    "/6.jpeg",
+    "/7.jpeg",
+    "/8.jpeg",
+    "/9.jpeg",
+    "/10.jpeg",
   ];
 
   // Pares de cartas
   const createCards = useCallback(() => {
-    const selectedEmojis = kdramaEmojis.slice(0, difficulty);
-    const cards = [...selectedEmojis, ...selectedEmojis]
+    const selectedPhotos = capetinhaPhotos.slice(0, difficulty);
+    const cards = [...selectedPhotos, ...selectedPhotos]
       .sort(() => Math.random() - 0.5)
-      .map((emoji, index) => ({
+      .map((photo, index) => ({
         id: index,
-        emoji,
+        photo,
         isFlipped: false,
         isMatched: false,
       }));
@@ -97,7 +91,7 @@ const Game = ({ onGameOver }) => {
         const firstCard = cards.find((c) => c.id === firstId);
         const secondCard = cards.find((c) => c.id === secondId);
 
-        if (firstCard.emoji === secondCard.emoji) {
+        if (firstCard.photo === secondCard.photo) {
           // Deu certo
           setTimeout(() => {
             setCards((prev) =>
@@ -107,7 +101,7 @@ const Game = ({ onGameOver }) => {
                   : c
               )
             );
-            setMatchedPairs((prev) => [...prev, firstCard.emoji]);
+            setMatchedPairs((prev) => [...prev, firstCard.photo]);
             setSelectedCards([]);
           }, 500);
         } else {
@@ -174,14 +168,21 @@ const Game = ({ onGameOver }) => {
                 onClick={() => handleCardClick(card.id)}
               >
                 <div className="card-inner">
-                  <div className="card-front">💗</div>
-                  <div className="card-back">{card.emoji}</div>
+                  <div className="card-front">😈</div>
+                  <div className="card-back">
+                    <img
+                      src={card.photo}
+                      alt="Foto capetinha"
+                      className="card-photo"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </div>
+
       {!gameStarted && (
         <div className="game-start-overlay">
           <div className="start-message">

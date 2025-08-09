@@ -6,7 +6,7 @@ const StartScreen = ({ onStart, highScores }) => {
     <div className="start-screen">
       <div className="start-content">
         <div className="title">
-          <h1>🔥 Reino da Capetinha 😈</h1>
+          <h1>👿 Reino da Capetinha 😈</h1>
           <p>Oii mana, minha capetinha, meu amorzinho, preparada??</p>
           <p>Bem-vinda ao inferno mais fofo! Vamos causar travessuras?</p>
         </div>
@@ -22,9 +22,9 @@ const StartScreen = ({ onStart, highScores }) => {
         </div>
 
         <div className="instructions">
-          <p>🔥 Clique nas cartas diabólicas para virá-las</p>
+          <p>👿 Clique nas cartas diabólicas para virá-las</p>
           <p>😈 Encontre os pares infernais iguais</p>
-          <p>👹 Complete tudo para se tornar a rainha capeta!</p>
+          <p>💀 Complete tudo para se tornar a rainha capeta!</p>
         </div>
 
         {Object.values(highScores).some((score) => score > 0) && (
@@ -46,7 +46,7 @@ const StartScreen = ({ onStart, highScores }) => {
         )}
 
         <button className="start-button" onClick={onStart}>
-          🔥 Entrar no Inferninho 🔥
+          👿 Entrar no Inferninho 😈
         </button>
       </div>
     </div>

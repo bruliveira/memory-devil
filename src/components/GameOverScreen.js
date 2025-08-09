@@ -15,17 +15,17 @@ const GameOverScreen = ({
     <div className="game-over-screen">
       <div className="game-over-content">
         <div className="game-over-title">
-          <h1>🎉 Formatura com sucesso! 🎉</h1>
+          <h1>👿 Que sucesso capetinha! 😈</h1>
           {isNewRecord && (
             <div className="new-record">
-              <span>🏆 NOVA NOTA MÁXIMA! 🏆</span>
+              <span>💀 NOVA NOTA MÁXIMA! 💀</span>
             </div>
           )}
         </div>
 
         <div className="score-display">
           <div className="current-score">
-            <h2>Tentativas na Escola ({difficulty} pares)</h2>
+            <h2>Tentativas no inferninho ({difficulty} pares)</h2>
             <div className="score-number">{score}</div>
           </div>
 
@@ -38,7 +38,7 @@ const GameOverScreen = ({
         </div>
 
         <div className="all-scores">
-          <h3>🎓 Boletim Escolar:</h3>
+          <h3>💀 Boletim da Capetinha:</h3>
           <div className="scores-grid">
             {[2, 4, 6, 8, 10].map((diff) => (
               <div
@@ -58,26 +58,28 @@ const GameOverScreen = ({
 
         <div className="character-sad">
           <div className="celebration">
-            <div className="celebration-emoji">💗</div>
-            <div className="celebration-emoji">🌸</div>
-            <div className="celebration-emoji">🎉</div>
-            <div className="celebration-emoji">🌺</div>
+            <div className="celebration-emoji">👿</div>
+            <div className="celebration-emoji">😈</div>
+            <div className="celebration-emoji">💀</div>
+            <div className="celebration-emoji">👺</div>
           </div>
         </div>
 
         <div className="game-over-buttons">
           <button className="restart-button" onClick={onRestart}>
-            📚 Nova Aula
+            👿 Nova aventura
           </button>
           <button className="menu-button" onClick={onBackToMenu}>
-            🏫 Voltar à Escola
+            😈 Voltar ao inferninho
           </button>
         </div>
 
         <div className="encouragement">
-          <p>
-            Você é a melhor cupido da escola! Todos os casais te agradecem! 🌸💕
-          </p>
+          <p>Você é a melhor capetinha o mundo! Te amooo! 👿💀</p>
+        </div>
+
+        <div className="author-signature">
+          <p>Desenvolvido com 💖 por bruliveira</p>
         </div>
       </div>
     </div>
